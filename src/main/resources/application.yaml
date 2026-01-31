@@ -13,7 +13,7 @@ spring:
             - Path=/api/users/**
 
           - id: board-service-jwt
-            uri: http://board-service:8080
+            uri: http://board-service:8081
             predicates:
             - Path=/api/boards
             - Method=POST
@@ -21,6 +21,6 @@ spring:
             - JwtAuthenticationFilter
 
           - id: board-service
-            uri: http://board-service:8080
+            uri: http://board-service:8081
             predicates:
             - Path=/api/boards/**
